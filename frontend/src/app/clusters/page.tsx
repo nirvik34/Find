@@ -379,6 +379,7 @@ export default function ClustersPage() {
                   <div className="mb-6">
                     <input
                       type="text"
+                      aria-label="Filter cluster members by filename"
                       placeholder="Filter by filename..."
                       value={filterText}
                       onChange={(e) => setFilterText(e.target.value)}
