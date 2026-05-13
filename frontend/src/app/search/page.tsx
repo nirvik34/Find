@@ -102,6 +102,19 @@ export default function SearchPage() {
                 </>
               )}
             </button>
+            {query && (
+              <button
+                type="button"
+                onClick={() => {
+                  setQuery("");
+                  searchMutation.reset();
+                  setSelectedMediaId(null);
+                }}
+                className="frost-button h-11 px-5 text-sm font-semibold"
+              >
+                Clear
+              </button>
+            )}
           </div>
 
           <div className="mt-5 flex flex-wrap justify-center gap-2">
