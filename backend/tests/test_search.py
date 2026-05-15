@@ -22,7 +22,11 @@ def _mock_search(client, fake_rows):
 
     try:
         with (
-            patch("find_api.routers.search.settings", ML_MODE="mock", EMBEDDING_DIM=768),
+            patch(
+                "find_api.routers.search.settings",
+                ML_MODE="mock",
+                EMBEDDING_DIM=768,
+            ),
             patch(
                 "find_api.ml.mock_embedder.get_mock_embedder",
                 return_value=mock_embedder,
